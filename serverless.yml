@@ -4,8 +4,16 @@ frameworkVersion: '3'
 
 provider:
   name: aws
-  runtime: nodejs12.x
+  runtime: nodejs14.x
   profile: mikaeel
+
+plugins:
+  - serverless-s3-sync
+
+custom:
+  s3Sync:
+    - bucketName: mikaeel-serverless-bucket
+      localDir: UploadData
 
 functions:
   hello:
