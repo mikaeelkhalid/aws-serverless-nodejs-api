@@ -1,4 +1,4 @@
-const Responses = require('./apiResponses');
+const Responses = require('../common/apiResponses');
 
 const data = {
   1: {
@@ -18,7 +18,7 @@ const data = {
   },
 };
 
-exports.handler = async (event, context) => {
+exports.handler = async (event) => {
   console.log('event: ', event);
 
   if (!event.pathParameters || !event.pathParameters.ID) {
